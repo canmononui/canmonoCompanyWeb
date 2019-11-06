@@ -5,6 +5,7 @@ html, body {
 
   /* Full screen */
   height: 100%;
+  width: 99.44%;
   /* smooth scrolling */
   scroll-behavior: smooth;
 }
