@@ -1,0 +1,407 @@
+html, body {
+  font-family: 'Kanit', sans-serif;
+  /* FOR NAV BAR */
+  /* margin-top: 45px; */
+
+  /* Full screen */
+  height: 100%;
+  /* smooth scrolling */
+  scroll-behavior: smooth;
+}
+
+.padding-0 {
+  padding-right:0;
+  padding-left:0;
+}
+
+.padding-8 {
+  padding-top:8px;
+  padding-bottom:8px;
+  padding-right:8px;
+  padding-left:8px;
+}
+
+.margin-8 {
+  margin-right:8;
+  margin-left:8;
+}
+
+.footer-content > img,
+.footer-content > p {
+    display: inline-block;
+}
+.img-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.icon {
+  border-width: 1.75px;
+  border-style: solid;
+  border-color: #000;
+  border-image: initial;
+  border-radius: 50% 50% 50% 50%; 
+  padding: 1% 1% 1% 1%;
+}
+.icon-line {
+  border-width: 1.75px;
+  border-style: solid;
+  border-color: #000;
+  border-image: initial;
+  border-radius: 50% 50% 50% 50%; 
+  padding: 1% 1.25% 1% 1.25%;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+/* .cover-img {
+  background-image: url("img/banner/building.jpg");
+} */
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  /* background-color: #555; */
+  color: white;
+  /* padding: 16px 20px; */
+  padding: 0px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  /* width: 280px; */
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 95px;
+  right: 45px;
+  /* border: 3px solid #f1f1f1; */
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+.btn-circle.btn-m {
+  width: 40px;
+  height: 40px;
+  padding: 5px 14px;
+  font-size: 16px;
+  line-height: 1.33;
+  border-radius: 25px;
+}
+
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+}
+
+.btn-circle.btn-xl {
+    width: 70px;
+    height: 70px;
+    padding: 10px 16px;
+    border-radius: 35px;
+    font-size: 24px;
+    line-height: 1.33;
+}
+
+.btn-circle.btn-glyphicon {
+  width: 50px;
+  height: 50px;
+  padding: 8px 10px;
+  border-width: 2px !important;
+  border-color: #fff !important;
+  border-radius: 10px;
+  font-size: 17px;
+  line-height: 1.33;
+}
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    padding: 6px 0px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.42857;
+}
+
+/* MODAL */
+.modal.fade .modal-bottom {
+  -webkit-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+
+  /* -webkit-transform: translate3d(0, 25%, 0);
+  transform: translate3d(0, 25%, 0); */
+}
+
+/* .modal.fade .modal-bottom {
+  transform: translate3d(0, 100vh, 0);
+}
+
+.modal.in .modal-bottom {
+  transform: translate3d(0, 0, 0);
+} */
+
+.modal .modal-bottom {
+  margin:0;
+  margin-top:auto;
+  padding: 0;
+  position:absolute;
+  bottom:0;
+  top:auto;
+  left:auto;
+  right:0;
+  height:calc(55% + 160px); /* default height:45% its just for demo*/
+}
+.modal .modal-bottom>.modal-content{
+  height:100%;
+  border-color: #fff;
+  border-radius:0;
+  margin:0;
+}
+.modal-bottom .modal-body
+{
+  height: calc(100% - 140px);overflow-y:auto;
+}
+@media (min-width: 1px){
+  .modal-bottom {max-width: 100%;width:100%;}
+}
+/*Custume scroll bar*/
+.modal-bottom ::-webkit-scrollbar {width:8px}
+.modal-bottom ::-webkit-scrollbar-button {width:8px;height:5px}
+.modal-bottom ::-webkit-scrollbar-thumb:hover {background: #ccc}
+.modal-bottom ::-webkit-scrollbar-thumb {	background:#f1f1f1;border: thin solid white;border-radius: 10px}
+.modal-bottom ::-webkit-scrollbar-track {background: #fff;border:thin solid white}   
+/* MODAL */
+
+
+
+/* MORE */
+.square:before {
+  content: "";
+  display: block;
+  padding-top: 100%; 	/* initial ratio of 1:1*/
+}
+
+.border-green {
+  border-width: 2px !important;
+  border-color: #00adc0 !important;
+}
+
+.bg-map {
+  /* The image used */
+  background-image: url("../img/bg-map.png");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-dot {
+  /* The image used */
+  background-image: url("../img/dot.png");
+
+  /* Full height */
+  /* height: 100%; */
+
+  /* Center and scale the image nicely */
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text-green {
+  color: #00adc0;
+}
+
+
+.btn-green-select {
+  color: #1d1d1d;
+  font-weight: bold;
+  background-color: #00adc0;
+  border-width: 2px !important;
+  border-color: #00adc0;
+}
+
+.btn-green {
+  color: #00adc0;
+  font-weight: bold;
+  background-color: #1d1d1d;
+  border-width: 2px !important;
+  border-color: #00adc0;
+}
+
+.btn-green:hover {
+  background-color: #00adc0;
+  border-color: #00adc0;
+  color: #1d1d1d;
+}
+
+.btn-contact {
+  color: white
+}
+
+.btn-contact:hover {
+  color: #00adc0;
+}
+
+.group-contact {
+  /* display: none; */
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  /* border: 3px solid #f1f1f1; */
+  z-index: 9;
+}
+
+/* position: fixed; */
+/* display: block; */
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: #00adc0;
+  border-radius: 50%;
+}
+
+
+/* .square-test {
+  float: left;
+  position: relative;
+  width: 100%;
+  padding-bottom: 30%;
+  margin: 1.66%;
+  background-color: #1E1E1E;
+  overflow: hidden;
+} */
+
+.square123 {
+  width: 100%;
+  padding-bottom: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+/* .btn-circle {
+  width: 30px;
+  height: 30px;
+  padding: 6px 0px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.42857;
+} */
+
+.custom-toggler.navbar-toggler {
+  border-color: white;
+}
+.custom-toggler .navbar-toggler-icon {
+background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+
+/* For slide bar */
+.slidecontainer {
+  width: 100%;
+}
+
+/* .slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+} */
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  background: #fff;
+  outline: none;
+  opacity: 1;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #00adc0;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #00adc0;
+  cursor: pointer;
+}
